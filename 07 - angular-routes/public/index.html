@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+	<title>AngularJS</title>
+</head>
+<body>
+
+<header>
+	<h1>My AngularJS App</h1>
+</header>
+
+<div ng-view></div>
+
+<div ng-controller="EventsController">
+	<ul>
+		<li ng-repeat='event in events'>{{event}}</li>
+	</ul>
+</div>
+<footer>
+	<p>All right reserved!</p>
+</footer>
+
+<!-- vendor -->
+<script src="assets/js/vendor/angular.min.js"></script>
+<script src="assets/js/vendor/angular-route.min.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="assets/js/vendor/underscore-min.js"></script>
+<script src="assets/js/vendor/restangular.min.js"></script>
+
+<!-- app -->
+<script src="assets/js/app.js"></script>
+<script src="assets/js/UserController.js"></script>
+<script src="assets/js/UserCreateController.js"></script>
+
+</body>
+</html>
