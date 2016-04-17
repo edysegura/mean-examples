@@ -13,9 +13,9 @@ function myClosure(name) {
 };
  
 var c1 = myClosure("Dependency 1");
-c1.count(); //Count Closure 1 0
-c1.count(); //Count Closure 1 1
+c1.count(); //Count Dependency 1 0
+c1.count(); //Count Dependency 1 1
  
 var c2 = myClosure("Dependency 2");
-c2.count(); //Count Closure 2 0
-c2.count(); //Count Closure 2 1
+c2.count(); //Count Dependency 2 0
+c2.count(); //Count Dependency 2 1
