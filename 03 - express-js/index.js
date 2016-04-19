@@ -13,5 +13,5 @@ app.get("/edysegura", function(req, res) {
 });
 
 var server = app.listen(3000, function() {
-	console.log("Server started...");
+	console.log("Server started... http://localhost:3000");
 });
