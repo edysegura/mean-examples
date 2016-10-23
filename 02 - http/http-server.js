@@ -1,6 +1,10 @@
 var http = require('http');
-http.createServer(function (req, res) {
-	console.log("Server started...", req.url);
-  	res.writeHead(200, {'Content-Type': 'text/plain'});
-  	res.end('This is a little server!\n');
-}).listen(3000);
+
+var server = http.createServer(function (request, response) {
+	console.log("Request for: ", request.url);
+	response.writeHead(200, { 'Content-Type': 'text/plain' });
+	response.end('This is a little server!\n');
+});
+
+function onStart() { console.log('Server started at http://localhost:3000') }
+server.listen(3000, onStart);
